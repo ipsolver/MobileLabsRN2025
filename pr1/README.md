@@ -68,3 +68,14 @@
 - `На емуляторі:`
 - - #### Android: npx expo run:android
 - - #### iOS (на Mac): npx expo run:ios (потрібен Xcode)
+
+## Скріншоти
+- Головна сторінка
+  
+![image](https://github.com/ipsolver/MobileLabsRN2025/blob/lab1/pr1/screenshots/screen1.jpg)
+- Галерея
+
+![image](https://github.com/ipsolver/MobileLabsRN2025/blob/lab1/pr1/screenshots/screen2.jpg)
+- Реєстрація
+
+![image](https://github.com/ipsolver/MobileLabsRN2025/blob/lab1/pr1/screenshots/screen3.jpg)
