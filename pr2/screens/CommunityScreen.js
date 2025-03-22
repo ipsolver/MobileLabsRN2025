@@ -4,12 +4,13 @@ import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 import Header from '../components/Header';
+import { useTheme } from "../components/Themes";
 
 const postsData = [
     {
         id: 1,
         title: "Post #1",
-        description: "This is a sample description.",
+        description: "Її брови заслуговують власної виставки в музеї",
         image: require('../assets/susie1.jpg'),
         category: "Screenshots",
         likes: 120,
@@ -18,7 +19,7 @@ const postsData = [
     {
         id: 2,
         title: "Post #2",
-        description: "Another post description.",
+        description: "Так, це там жабка",
         image: require('../assets/susie1.jpg'),
         category: "Artwork",
         likes: 230,
@@ -27,7 +28,7 @@ const postsData = [
     {
         id: 3,
         title: "Post #3",
-        description: "Yet another description.",
+        description: "Вона чарівна😉",
         image: require('../assets/susie1.jpg'),
         category: "Workflow",
         likes: 310,
@@ -36,7 +37,7 @@ const postsData = [
     {
         id: 4,
         title: "Post #4",
-        description: "Some description here.",
+        description: "Що я тут взагалі роблю?",
         image: require('../assets/susie1.jpg'),
         category: "New",
         likes: 90,
@@ -45,6 +46,7 @@ const postsData = [
 ];
 
 const CommunityScreen = () => {
+    const { theme, toggleTheme } = useTheme();
     const navigation = useNavigation();
     const [selectedFilter, setSelectedFilter] = useState('All');
     const [posts, setPosts] = useState([...postsData]);
@@ -118,7 +120,7 @@ const CommunityScreen = () => {
 
 const Container = styled.View`
     flex: 1;
-    background-color: #1b2838;
+    background-color: ${(props) => props.theme.background};
     padding: 10px;
 `;
 
@@ -148,7 +150,7 @@ const FilterText = styled.Text`
 `;
 
 const PostContainer = styled.View`
-    background-color: #1E1E1E;
+    background-color: ${(props) => props.theme.post};
     padding: 10px;
     margin-vertical: 5px;
     border-radius: 10px;
@@ -168,7 +170,7 @@ const PostTitle = styled.Text`
 `;
 
 const PostDescription = styled.Text`
-    color: #aaa;
+    color: ${(props) => props.theme.text};
 `;
 
 const InteractionContainer = styled.View`

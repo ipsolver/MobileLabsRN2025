@@ -3,6 +3,7 @@ import { View, FlatList, Image, Text, ActivityIndicator, TouchableOpacity } from
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
+import { useTheme } from "../components/Themes";
 
 const chatData = [
     { id: 1, name: "Vader", lastMessage: "Hello!", date: "22 Mar", avatar: require('../assets/susie1.jpg'), unread: true },
@@ -12,6 +13,7 @@ const chatData = [
 ];
 
 const ChatScreen = () => {
+    const { theme, toggleTheme } = useTheme();
     const navigation = useNavigation();
     const [selectedTab, setSelectedTab] = useState('newChats');
 
@@ -55,13 +57,13 @@ const ChatScreen = () => {
 
 const Container = styled.View`
     flex: 1;
-    background-color: #1b2838;
+    background-color: ${(props) => props.theme.background};
     padding: 10px;
 `;
 
 const SwitchContainer = styled.View`
     flex-direction: row;
-    background-color: #333;
+    background-color: ${(props) => props.theme.post};
     border-radius: 8px;
     margin-bottom: 10px;
     padding: 5px;
@@ -83,7 +85,7 @@ const SwitchText = styled.Text`
 const ChatItem = styled.TouchableOpacity`
     flex-direction: row;
     align-items: center;
-    background-color: #1e1e1e;
+    background-color: ${(props) => props.theme.post};
     padding: 12px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -107,7 +109,7 @@ const ChatName = styled.Text`
 `;
 
 const LastMessage = styled.Text`
-    color: #aaa;
+    color: ${(props) => props.theme.chat};
     font-size: 14px;
 `;
 

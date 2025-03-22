@@ -85,7 +85,7 @@ const Container = styled.View`
 `;
 const SwitchContainer = styled.View`
     flex-direction: row;
-    background-color: ${(props) => props.theme.card};
+    background-color: ${(props) => props.theme.post};
     border-radius: 8px;
     margin-bottom: 10px;
     padding: 5px;

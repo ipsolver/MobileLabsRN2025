@@ -69,6 +69,7 @@ const getPlatformIcon = (platform) => {
     return (
     <Container>
       <Header title="Store" />
+<ScrollView>
       <FeaturedContainer>
       <FlatList
         data={featuredGames}
@@ -146,6 +147,7 @@ const getPlatformIcon = (platform) => {
         onEndReachedThreshold={0.5}
         ListFooterComponent={loading ? <ActivityIndicator size="large" color="#0000ff" /> : null}
       />
+</ScrollView>
     </Container>
   );
 };

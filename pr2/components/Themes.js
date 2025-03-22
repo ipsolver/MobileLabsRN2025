@@ -5,22 +5,20 @@ const lightTheme = {
   background: "#FFFFFF",
   text: "#000000",
   card: "#F8F8F8",
-  cardSecondary: "#E0E0E0",
-  primary: "#1E90FF",
+  post: "#888",
   headerSearch: "#000000",
   loger: "#808080",
-  secondaryText: "#444444",
+  chat: "#ffffff",
 };
 
 const darkTheme = {
   background: "#1b2838",
   text: "#FFFFFF",
-  card: "#252525",
-  cardSecondary: "#2E2E2E",
-  primary: "#1E90FF",
+  card: "#1b2838",
+  post: "#1E1E1E",
   headerSearch: "#808080",
   loger: "#aaa",
-  secondaryText: "#AAAAAA",
+  chat: "#aaa",
 };
 
 const ThemeContext = createContext();

@@ -95,7 +95,7 @@ const Name = styled.Text`
 `;
 
 const Group = styled.Text`
-  color: ${(props) => props.theme.secondaryText};
+  color: ${(props) => props.theme.text};
   font-size: 14px;
 `;
 
