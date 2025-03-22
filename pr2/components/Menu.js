@@ -6,10 +6,13 @@ import CommunityScreen from '../screens/CommunityScreen';
 import ChatScreen from '../screens/ChatScreen';
 import SafetyScreen from '../screens/SafetyScreen';
 import AccountScreen from '../screens/AccountScreen';
+import styled from 'styled-components/native';
+import { useTheme } from "../components/Themes";
 
 const Tab = createBottomTabNavigator();
 
 const Menu = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -39,10 +42,10 @@ const Menu = () => {
 
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#fff',
+        tabBarActiveTintColor: theme.text,
         tabBarInactiveTintColor: '#708090',
         tabBarStyle: {
-          backgroundColor: '#1b2838',
+          backgroundColor: theme.background,
           borderTopWidth: 1,
           borderTopColor: 'rgba(255, 255, 255, 0.1)',
           paddingBottom: 5,

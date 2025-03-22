@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList, ScrollView, Image, TouchableOpacity, 
 import Header from '../components/Header';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from 'styled-components/native';
+import { useTheme } from "../components/Themes";
 
 
 const featuredGames = [
@@ -25,25 +26,29 @@ const games = [
   { id: '5', title: 'Horizon Zero Dawn', image: require('../assets/horizon.jpg'), platform: ['windows'], price: '$38' },
 ];
 
+
+const StoreScreen = () => {
+  const { theme, toggleTheme } = useTheme();
+  const [selectedFilter, setSelectedFilter] = useState('Top Sellers');
+  const [gamesData, setGamesData] = useState(games);
+  const [loading, setLoading] = useState(false);
+
 const getPlatformIcon = (platform) => {
   switch (platform) {
     case 'windows':
-      return <Icon name="windows" size={18} color="white" />;
+      return <Icon name="windows" size={18} color={theme.text} />;
     case 'mac':
-      return <Icon name="apple" size={18} color="white" />;
+      return <Icon name="apple" size={18} color={theme.text} />;
     case 'linux':
-      return <Icon name="linux" size={18} color="white" />;
+      return <Icon name="linux" size={18} color={theme.text} />;
     case 'playstation':
-      return <Icon name="gamepad" size={18} color="white" />;
+      return <Icon name="gamepad" size={18} color={theme.text} />;
     default:
       return null;
   }
 };
 
-const StoreScreen = () => {
-  const [selectedFilter, setSelectedFilter] = useState('Top Sellers');
-  const [gamesData, setGamesData] = useState(games);
-  const [loading, setLoading] = useState(false);
+
 
   const loadMoreGames = useCallback(() => {
     if (loading) return;
@@ -148,8 +153,9 @@ export default StoreScreen;
 
 const Container = styled.View`
   flex: 1;
-  background-color: #1b2838;
+  background-color: ${(props) => props.theme.background};
 `;
+
 const FeaturedContainer = styled.View`
   margin-vertical: 10px;
   padding-horizontal: 15px;
@@ -209,7 +215,7 @@ const PriceBlock = styled.View`
 `;
 
 const NewPrice = styled.Text`
-  color: white;
+  color: ${(props) => props.theme.text};
   font-weight: bold;
 `;
 const FeaturedPlatformIcons = styled.View`
@@ -245,6 +251,7 @@ const GameItem = styled.View`
   flex-direction: row;
   align-items: center;
   padding: 15px;
+  background-color: ${(props) => props.theme.card};
   border-bottom-width: 1px;
   border-bottom-color: #3a506b;
 `;
@@ -261,7 +268,7 @@ const GameInfo = styled.View`
 `;
 
 const GameTitle = styled.Text`
-  color: white;
+  color: ${(props) => props.theme.text};
   font-size: 16px;
   font-weight: bold;
 `;

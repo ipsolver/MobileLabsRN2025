@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Animated } from 'react-native';
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
+import { useTheme } from "../components/Themes";
 
 const generateCode = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -79,12 +80,12 @@ const SafetyScreen = () => {
 
 const Container = styled.View`
     flex: 1;
-    background-color: #1b2838;
+    background-color: ${(props) => props.theme.background};
     padding: 10px;
 `;
 const SwitchContainer = styled.View`
     flex-direction: row;
-    background-color: #333;
+    background-color: ${(props) => props.theme.card};
     border-radius: 8px;
     margin-bottom: 10px;
     padding: 5px;
@@ -104,13 +105,13 @@ const SwitchText = styled.Text`
 `;
 
 const LoggedInText = styled.Text`
-    color: #aaa;
+    color: ${(props) => props.theme.loger};
     text-align: center;
     margin-top: 20px;
 `;
 
 const AuthCode = styled.Text`
-    color: #fff;
+    color: ${(props) => props.theme.text};
     font-size: 32px;
     font-weight: bold;
     text-align: center;

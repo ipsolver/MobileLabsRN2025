@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Modal, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useTheme } from "../components/Themes";
 import styled from "styled-components/native";
 
 const AccountScreen = () => {
-  const navigation = useNavigation();
+  const { theme, toggleTheme } = useTheme();
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleLogout = () => {
@@ -15,22 +15,18 @@ const AccountScreen = () => {
     setModalVisible(false);
   };
 
-  const handleChangeTheme = () => {
-    console.log("Тут буде логіка зміни теми");
-  };
-
   return (
-    <Container>
+    <Container theme={theme}>
       <ProfileSection>
         <AvatarContainer>
           <Avatar source={require("../assets/susie1.jpg")} />
           <StatusIndicator />
         </AvatarContainer>
-        <Name>Vadym Lishchynskyi</Name>
-        <Group>IPZk-24-1</Group>
+        <Name theme={theme}>Vadym Lishchynskyi</Name>
+        <Group theme={theme}>IPZk-24-1</Group>
       </ProfileSection>
 
-      <StyledButton onPress={handleChangeTheme}>
+      <StyledButton onPress={toggleTheme}>
         <ButtonText>Change Theme</ButtonText>
       </StyledButton>
 
@@ -59,7 +55,7 @@ const AccountScreen = () => {
 
 const Container = styled.View`
   flex: 1;
-  background-color: #1b2838;
+  background-color: ${(props) => props.theme.background};
   align-items: center;
   justify-content: center;
 `;
@@ -93,23 +89,23 @@ const StatusIndicator = styled.View`
 `;
 
 const Name = styled.Text`
-  color: #fff;
+  color: ${(props) => props.theme.text};
   font-size: 18px;
   margin-top: 10px;
 `;
 
 const Group = styled.Text`
-  color: #aaa;
+  color: ${(props) => props.theme.secondaryText};
   font-size: 14px;
 `;
 
 const StyledButton = styled.TouchableOpacity`
-  background-color: #2c2c2e;
-  padding: 15px;
-  border-radius: 10px;
+  background-color: #2a475e;
   width: 80%;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 10px;
   align-items: center;
-  margin-vertical: 10px;
 `;
 
 const ButtonText = styled.Text`
