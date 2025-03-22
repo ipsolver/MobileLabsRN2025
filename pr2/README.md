@@ -1,11 +1,52 @@
-# Sample Snack app
+## Лабораторна 2
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+`Автор: Ліщинський Вадим, ІПЗк-24-1`
+### Структура застосунку
+- [StoreScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screens/StoreScreen.js) (Сторінка магазину та за замовчуванням перша сторінка)
+- [CommunityScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screens/CommunityScreen.js) (Сторінка обгвоорень та постів)
+- [ChatScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screens/ChatScreen.js) (сторінка для листування)
+- [SafetyScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screens/SafetyScreen.js) (сторінка для авторизації)
+- [AccountScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screens/AccountScreen.js) (сторінка профіля)
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+### Скріншоти застосунку
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+- StoreScreen
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+![img](https://raw.githubusercontent.com/ipsolver/MobileLabsRN2025/lab2/pr2/screenshots/store_screen.jpg)
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+- StoreScreen в динаміці
+
+![img](https://raw.githubusercontent.com/ipsolver/MobileLabsRN2025/lab2/pr2/screenshots/store_screen2.png)
+
+- Змінена тема в StoreScreen
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/store_screen_theme.jpg.png)
+
+- CommunityScreen та його змінена тема
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/community.png)
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/community_theme.png)
+
+- ChatScreen та його змінена тема
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/chat.png)
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/chat_theme.png)
+
+- SafetyScreen та його змінена тема
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/safety.png)
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/safety_theme.png)
+
+- AccountScreen та його змінена тема
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/account.png)
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/account_theme.png)
+
+- Модальне вікно в AccountScreen при натисканні на "Logout"
+
+![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab2/pr2/screenshots/account_2.png)
+
