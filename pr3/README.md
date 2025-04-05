@@ -4,7 +4,7 @@
 ### Структура застосунку
 - [HomeScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab3/pr3/screens/HomeScreen.js) (Сторінка з клікером)
 
-- [AcievementsScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab3/pr3/screens/AcievementsScreen.js) (Сторінка з досягненнями)
+- [AcievementsScreen](https://github.com/ipsolver/MobileLabsRN2025/blob/lab3/pr3/screens/AchievementsScreen.js) (Сторінка з досягненнями)
 
 ### Скріншоти застосунку
 
@@ -12,7 +12,7 @@
 
 ![img](https://raw.githubusercontent.com/ipsolver/MobileLabsRN2025/lab3/pr3/screenshots/1.jpg)
 
-- AcievementsScreen
+- AchievementsScreen
 
 ![img](https://raw.githubusercontent.com/ipsolver/MobileLabsRN2025/lab3/pr3/screenshots/2.jpg)
 
@@ -20,6 +20,6 @@
 
 ![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab3/pr3/screenshots/3.jpg)
 
-- AcievementsScreen після змін
+- AchievementsScreen після змін
 
 ![img](https://github.com/ipsolver/MobileLabsRN2025/blob/lab3/pr3/screenshots/4.jpg)
